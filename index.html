@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CharMate AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <h1>CharMate AI</h1>
+          <p>Your safe AI character app</p>
+        </div>
+      </div>
+
+      <label class="small-label">Gemini API Key</label>
+      <div class="key-box">
+        <input id="apiKey" type="password" placeholder="Paste Gemini API key" />
+        <button id="saveKeyBtn">Save</button>
+      </div>
+
+      <label class="small-label">Choose Character</label>
+      <div id="characterList" class="character-list"></div>
+
+      <button id="clearBtn" class="danger">Clear Chat</button>
+    </aside>
+
+    <main class="chat-area">
+      <header class="chat-header">
+        <div>
+          <h2 id="characterName">Choose a character</h2>
+          <p id="characterDesc">Select one from the left side.</p>
+        </div>
+      </header>
+
+      <section id="chatMessages" class="messages"></section>
+
+      <form id="chatForm" class="chat-form">
+        <input id="userInput" autocomplete="off" placeholder="Type your message..." />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="characters.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
